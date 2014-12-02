@@ -4,6 +4,8 @@ import Prelude
 import XCTest
 
 final class CurryTests: XCTestCase {
+	// MARK: - Currying
+
 	func testBinaryCurrying() {
 		let f: Int -> Int -> Bool = curry(==)
 		XCTAssertTrue(f(0)(0))
@@ -11,6 +13,9 @@ final class CurryTests: XCTestCase {
 		XCTAssertTrue(f(1)(1))
 		XCTAssertFalse(f(0)(1))
 	}
+
+
+	// MARK: - Uncurrying
 
 	func testBinaryUncurrying() {
 		let f: Int -> Int -> Bool = curry(==)
