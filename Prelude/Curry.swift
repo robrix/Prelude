@@ -15,7 +15,7 @@ public func curry<T, U, V, W>(f: (T, U, V) -> W) -> T -> U -> V -> W {
 
 // MARK: - Uncurrying
 
-/// Uncurries a curried binary function `f`, producing a function which takes receives its arguments as a tuple.
+/// Uncurries a curried binary function `f`, producing a function which can be applied to a tuple.
 public func uncurry<T, U, V>(f: T -> U -> V) -> (T, U) -> V {
 	return { f($0)($1) }
 }
