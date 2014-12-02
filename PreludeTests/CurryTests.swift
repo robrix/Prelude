@@ -14,6 +14,11 @@ final class CurryTests: XCTestCase {
 		XCTAssertFalse(f(0)(1))
 	}
 
+	func testTernaryCurrying() {
+		let f: [Int] -> Int -> ((Int, Int) -> Int) -> Int = curry(reduce)
+		XCTAssertEqual(f([1, 2, 3])(0)(+), 6)
+	}
+
 
 	// MARK: - Uncurrying
 

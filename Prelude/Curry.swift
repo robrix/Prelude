@@ -7,6 +7,11 @@ public func curry<T, U, V>(f: (T, U) -> V) -> T -> U -> V {
 	return { x in { y in f(x, y) }}
 }
 
+/// Curries a ternary function `f`, producing a function which can be partially applied.
+public func curry<T, U, V, W>(f: (T, U, V) -> W) -> T -> U -> V -> W {
+	return { x in curry { y, z in f(x, y, z) } }
+}
+
 
 // MARK: - Uncurrying
 
