@@ -11,4 +11,13 @@ final class CurryTests: XCTestCase {
 		XCTAssertTrue(f(1)(1))
 		XCTAssertFalse(f(0)(1))
 	}
+
+	func testBinaryUncurrying() {
+		let f: Int -> Int -> Bool = curry(==)
+		let g = uncurry(f)
+		XCTAssertTrue(g(0, 0))
+		XCTAssertFalse(g(1, 0))
+		XCTAssertTrue(g(1, 1))
+		XCTAssertFalse(g(0, 1))
+	}
 }
