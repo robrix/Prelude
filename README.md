@@ -9,7 +9,7 @@ Notably, this framework does not provide any new types, or any functions which o
 
 ### `id`
 
-Passing `id` as the argument to a [`Stream`](https://github.com/robrix/Traversal) of `Stream`s `flattenMap` method will flatten it out into a stream of all the nested elements:
+Passing `id` as the argument to the `flattenMap` method of a [`Stream`](https://github.com/robrix/Traversal) of `Stream`s will flatten it out into a stream of all the nested elements:
 
 ```swift
 func flatten<T>(stream: Stream<Stream<T>>) -> Stream<T> {
