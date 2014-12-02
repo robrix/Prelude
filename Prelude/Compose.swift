@@ -1,6 +1,6 @@
 //  Copyright (c) 2014 Rob Rix. All rights reserved.
 
-// MARK: - Operator
+// MARK: - Operators
 
 infix operator >>> {
 	// Function composition is associative, but since we want to chain compositions, we pick right-associativity primarily for consistency with Haskell.
