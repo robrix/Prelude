@@ -6,7 +6,7 @@ public func id<T>(x: T) -> T {
 }
 
 
-// Returns a function which ignores its argument and returns `x` instead.
+/// Returns a function which ignores its argument and returns `x` instead.
 public func const<T, U>(x: T) -> U -> T {
 	return { _ in x }
 }
