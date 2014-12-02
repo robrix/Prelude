@@ -42,6 +42,17 @@ while true {
 ```
 
 
+### `fix`
+
+You can use `fix` to make an anonymous function which calls itself recursively:
+
+```swift
+let factorial = fix { recur in
+	{ n in n > 0 ? n * recur(n - 1) : 1 }
+}
+```
+
+
 ## Documentation
 
 API documentation is in the source.
