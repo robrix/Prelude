@@ -30,6 +30,18 @@ if let string = result.either(const(nil), id) {
 ```
 
 
+### `>>>` and `<<<`
+
+The left-to-right and right-to-left composition operators (`>>>` and `<<<` respectively) chain operations together:
+
+```swift
+let repl: File -> String = readLine >>> parseString >>> evaluateAST >>> toString
+while true {
+	println(repl(standardInput))
+}
+```
+
+
 ## Documentation
 
 API documentation is in the source.
