@@ -21,14 +21,14 @@ infix operator <<< {
 
 // MARK: - Composition
 
-/// Returns the left-to-right composition of f on g.
+/// Returns the left-to-right composition of unary `f` on unary `g`.
 ///
 /// This is the function such that `(f .. g)(x)` = `f(g(x))`.
 public func >>> <T, U, V> (f: U -> V, g: T -> U) -> T -> V {
 	return { f(g($0)) }
 }
 
-/// Returns the right-to-left composition of g on f.
+/// Returns the right-to-left composition of unary `g` on unary `f`.
 ///
 /// This is the function such that `(f .. g)(x)` = `g(f(x))`.
 public func <<< <T, U, V> (f: T -> U, g: U -> V) -> T -> V {
