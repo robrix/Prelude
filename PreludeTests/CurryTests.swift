@@ -30,4 +30,11 @@ final class CurryTests: XCTestCase {
 		XCTAssertTrue(g(1, 1))
 		XCTAssertFalse(g(0, 1))
 	}
+
+	func testTernaryUncurrying() {
+		typealias ArgumentsTuple = ([Int], Int, (Int, Int) -> Int)
+		let arguments: ArgumentsTuple = ([1, 2, 3], 0, +)
+		let f: ArgumentsTuple -> Int = uncurry(curry(reduce))
+		XCTAssertEqual((reduce as ArgumentsTuple -> Int)(arguments), f(arguments))
+	}
 }

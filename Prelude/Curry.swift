@@ -19,3 +19,8 @@ public func curry<T, U, V, W>(f: (T, U, V) -> W) -> T -> U -> V -> W {
 public func uncurry<T, U, V>(f: T -> U -> V) -> (T, U) -> V {
 	return { f($0)($1) }
 }
+
+/// Uncurries a curried ternary function `f`, producing a function which can be applied to a tuple.
+public func uncurry<T, U, V, W>(f: T -> U -> V -> W) -> (T, U, V) -> W {
+	return { f($0)($1)($2) }
+}
