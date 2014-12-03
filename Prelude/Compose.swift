@@ -37,7 +37,7 @@ public func <<< <T, U, V, W> (f: V -> W, g: (T, U) -> V) -> (T, U) -> W {
 
 /// Returns the right-to-left composition of binary `f` on unary `g`.
 ///
-/// This is the function such that `(f <<< g)(x, y)` = `f(g(x, y))`.
+/// This is the function such that `(f <<< g)(x, y)` = `f(g(x), y)`.
 public func <<< <T, U, V, W> (f: (U, V) -> W, g: T -> U) -> (T, V) -> W {
 	return { f(g($0), $1) }
 }
