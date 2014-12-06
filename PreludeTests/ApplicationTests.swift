@@ -18,8 +18,12 @@ final class ApplicationTests: XCTestCase {
 
 	// MARK: Backward function application
 
-	func testBackwardFunctionApplication() {
+	func testBackwardUnaryFunctionApplication() {
 		let digits = countElements <| toString <| 100
 		XCTAssertEqual(digits, 3)
+	}
+
+	func testBackwardBinaryFunctionApplication() {
+		XCTAssertEqual((+) <| (1, 2), 3)
 	}
 }
