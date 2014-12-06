@@ -15,6 +15,11 @@ final class ApplicationTests: XCTestCase {
 		XCTAssertEqual((1, 2) |> (+), 3)
 	}
 
+	func testForwardPipelineWithMixedArity() {
+		let digits = (75, 25) |> (+) |> toString |> countElements
+		XCTAssertEqual(digits, 3)
+	}
+
 
 	// MARK: Backward function application
 
@@ -25,5 +30,10 @@ final class ApplicationTests: XCTestCase {
 
 	func testBackwardBinaryFunctionApplication() {
 		XCTAssertEqual((+) <| (1, 2), 3)
+	}
+
+	func testBackwardPipelineWithMixedArity() {
+		let digits = countElements <| toString <| (+) <| (75, 25)
+		XCTAssertEqual(digits, 3)
 	}
 }
