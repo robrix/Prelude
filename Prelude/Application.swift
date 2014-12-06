@@ -28,13 +28,6 @@ public func |> <T, U> (left: T, right: T -> U) -> U {
 	return right(left)
 }
 
-/// Forward binary function application.
-///
-/// Applies the function on the right side to the pair of values on the left.
-public func |> <T, U, V> (left: (T, U), right: (T, U) -> V) -> V {
-	return right(left.0, left.1)
-}
-
 
 // MARK: Backward function application.
 
