@@ -7,6 +7,13 @@ Notably, this framework does not provide any new types, or any functions which o
 
 ## Use
 
+- [`id`](#id)
+- [`const`](#const)
+- [`>>>` and `<<<`](#-and-)
+- [`fix`](#fix)
+- [`|>` and `<|`](-and--1)
+
+
 ### `id`
 
 Passing `id` as the argument to the `flattenMap` method of a [`Stream`](https://github.com/robrix/Traversal) of `Stream`s will flatten it out into a stream of all the nested elements:
