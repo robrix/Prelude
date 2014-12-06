@@ -3,18 +3,18 @@
 // MARK: Operators
 
 infix operator |> {
-	/// Associates to the left for consistency with F# and λ calculi.
+	/// Associates to the left so that pipelines behave as expected.
 	associativity left
 
-	/// Minimal precedence means that everything else binds tighter.
+	/// Minimal precedence.
 	precedence 0
 }
 
 infix operator <| {
-	/// Associates to the left for consistency with F# and λ calculi.
+	/// Associates to the left so that pipelines behave as expected.
 	associativity left
 
-	/// Minimal precedence means that everything else binds tighter.
+	/// Minimal precedence.
 	precedence 0
 }
 
