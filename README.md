@@ -52,6 +52,26 @@ let factorial = fix { recur in
 }
 ```
 
+### `|>` and `<|`
+
+The forward and backward application operators (`|>` and `<|` respectively) apply the function on the side they’re pointing at to the value on the other side.
+
+This can sometimes make code more readable. This is particularly the case for the forward application operator since it reads left-to-right, presenting the data flow in the natural order for e.g. English text:
+
+```swift
+100 |> toString |> countElements // => 3
+// vs.
+countElements <| toString <| 100
+// which means the same thing as
+countElements(toString(100))
+```
+
+These operators have lower precedence than the composition operators, which enables us to use them with composed functions. For example, we could also have written the above example as:
+
+```swift
+100 |> toString >>> countElements
+```
+
 
 ## Documentation
 
