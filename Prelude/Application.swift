@@ -19,7 +19,7 @@ infix operator <| {
 }
 
 
-// MARK: Function application
+// MARK: Forward function application
 
 /// Forward unary function application.
 ///
@@ -27,6 +27,9 @@ infix operator <| {
 public func |> <T, U> (left: T, right: T -> U) -> U {
 	return right(left)
 }
+
+
+// MARK: Backward function application.
 
 /// Backward unary function application.
 ///
