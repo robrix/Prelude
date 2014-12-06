@@ -5,10 +5,12 @@ import XCTest
 
 final class ApplicationTests: XCTestCase {
 	func testForwardApplication() {
-		XCTAssertEqual(1 |> toString, "1")
+		let digits = 100 |> toString |> countElements
+		XCTAssertEqual(digits, 3)
 	}
 
 	func testBackwardApplication() {
-		XCTAssertEqual(toStiring <1, "1")
+		let digits = countElements <| toString <| 100
+		XCTAssertEqual(digits, 3)
 	}
 }
