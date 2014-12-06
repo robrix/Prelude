@@ -15,7 +15,7 @@ infix operator |> {
 
 /// Forward function application.
 ///
-/// Applies the value on the left to the function on the right.
+/// Applies the function on the right to the value on the left.
 public func |> <T, U> (left: T, right: T -> U) -> U {
 	return right(left)
 }
