@@ -21,9 +21,9 @@ infix operator <| {
 
 // MARK: Forward function application
 
-/// Forward unary function application.
+/// Forward function application.
 ///
-/// Applies the function on the right to the value on the left.
+/// Applies the function on the right to the value on the left. Functions of >1 argument can be applied by placing their arguments in a tuple on the left hand side.
 public func |> <T, U> (left: T, right: T -> U) -> U {
 	return right(left)
 }
@@ -31,9 +31,9 @@ public func |> <T, U> (left: T, right: T -> U) -> U {
 
 // MARK: Backward function application.
 
-/// Backward unary function application.
+/// Backward function application.
 ///
-/// Applies the function on the left to the value on the right.
+/// Applies the function on the left to the value on the right. Functions of >1 argument can be applied by placing their arguments in a tuple on the right hand side.
 public func <| <T, U> (left: T -> U, right: T) -> U {
 	return left(right)
 }
