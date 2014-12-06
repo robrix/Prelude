@@ -11,8 +11,8 @@ infix operator |> {
 }
 
 infix operator <| {
-	/// Associates to the left so that pipelines behave as expected.
-	associativity left
+	/// Associates to the right so that pipelines behave as expected.
+	associativity right
 
 	/// Minimal precedence.
 	precedence 0
