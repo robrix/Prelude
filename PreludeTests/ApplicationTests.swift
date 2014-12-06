@@ -6,14 +6,19 @@ import XCTest
 final class ApplicationTests: XCTestCase {
 	// MARK: Forward function application
 
-	func testForwardUnaryApplication() {
+	func testForwardUnaryFunctionApplication() {
 		let digits = 100 |> toString |> countElements
 		XCTAssertEqual(digits, 3)
 	}
 
+	func testForwardBinaryFunctionApplication() {
+		XCTAssertEqual((1, 2) |> (+), 3)
+	}
+
+
 	// MARK: Backward function application
 
-	func testBackwardApplication() {
+	func testBackwardFunctionApplication() {
 		let digits = countElements <| toString <| 100
 		XCTAssertEqual(digits, 3)
 	}
