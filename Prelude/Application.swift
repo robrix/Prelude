@@ -21,14 +21,14 @@ infix operator <| {
 
 // MARK: Function application
 
-/// Forward function application.
+/// Forward unary function application.
 ///
 /// Applies the function on the right to the value on the left.
 public func |> <T, U> (left: T, right: T -> U) -> U {
 	return right(left)
 }
 
-/// Backward function application.
+/// Backward unary function application.
 ///
 /// Applies the function on the left to the value on the right.
 public func <| <T, U> (left: T -> U, right: T) -> U {
