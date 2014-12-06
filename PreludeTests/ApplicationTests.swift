@@ -4,10 +4,14 @@ import Prelude
 import XCTest
 
 final class ApplicationTests: XCTestCase {
-	func testForwardApplication() {
+	// MARK: Forward function application
+
+	func testForwardUnaryApplication() {
 		let digits = 100 |> toString |> countElements
 		XCTAssertEqual(digits, 3)
 	}
+
+	// MARK: Backward function application
 
 	func testBackwardApplication() {
 		let digits = countElements <| toString <| 100
