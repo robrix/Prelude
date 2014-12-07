@@ -14,6 +14,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`fix`](#fix)
 	- [`|>` and `<|`](-and--1)
 	- [`curry`](#curry)
+	- [`flip`](#flip)
 - [Documentation](#documentation)
 - [Integration](#integration)
 
@@ -109,6 +110,16 @@ We’re using Prelude’s  [`|>`](-and--1) operator here to emphasize the idiom,
 
 ```swift
 map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
+```
+
+
+## `flip`
+
+Faux operator sectioning using `curry` might be a little surprising using non-commutative operators, for example `-` and `/`: `1 |> curry(-)` means `{ 1 - $0 }`, which is very different from `{ $0 - 1 }`. You can use `flip` to get the latter:
+
+```swift
+map([1, 2, 3], 1 |> curry(-)) // => [0, -1, -2]
+map([1, 2, 3], 1 |> curry(flip(-))) // => [0, 1, 2]
 ```
 
 
