@@ -1,20 +1,29 @@
 # Prelude
 
-This is a Swift microframework providing a number of simple functions that I use in many of my other frameworks. Rather than continue to reimplement them for each consumer, I am gathering them here together.
+This is a Swift µframework providing a number of simple functions that I use in many of my other frameworks. Rather than continue to reimplement them for each consumer, I am gathering them here together.
 
 Notably, this framework does not provide any new types, or any functions which operate on custom types; those presumably belong in µframeworks of their own.
 
 
-## Use
+## Table of Contents
 
-- [`id`](#id)
-- [`const`](#const)
-- [`>>>` and `<<<`](#-and-)
-- [`fix`](#fix)
-- [`|>` and `<|`](-and--1)
+- [Gallery](#gallery)
+	- [`id`](#id)
+	- [`const`](#const)
+	- [`>>>` and `<<<`](#-and-)
+	- [`fix`](#fix)
+	- [`|>` and `<|`](-and--1)
+	- [`curry`](#curry)
+- [Documentation](#documentation)
+- [Integration](#integration)
 
 
-### `id`
+# Gallery
+
+Prelude’s functions are infinitely useful. Here’s a gallery of just a few of the things you can do with them.
+
+
+## `id`
 
 Passing `id` as the argument to the `flattenMap` method of a [`Stream`](https://github.com/robrix/Traversal) of `Stream`s will flatten it out into a stream of all the nested elements:
 
@@ -25,7 +34,7 @@ func flatten<T>(stream: Stream<Stream<T>>) -> Stream<T> {
 ```
 
 
-### `const`
+## `const`
 
 Passing the result of `const` to an [`Either`](https://github.com/robrix/Either) is convenient for transforming it into an `Optional<T>`:
 
@@ -37,7 +46,7 @@ if let string = result.either(const(nil), id) {
 ```
 
 
-### `>>>` and `<<<`
+## `>>>` and `<<<`
 
 The left-to-right and right-to-left composition operators (`>>>` and `<<<` respectively) chain operations together:
 
@@ -49,7 +58,7 @@ while true {
 ```
 
 
-### `fix`
+## `fix`
 
 You can use `fix` to make an anonymous function which calls itself recursively:
 
@@ -59,7 +68,7 @@ let factorial = fix { recur in
 }
 ```
 
-### `|>` and `<|`
+## `|>` and `<|`
 
 The forward and backward application operators (`|>` and `<|` respectively) apply the function on the side they’re pointing at to the value on the other side.
 
@@ -86,12 +95,29 @@ Functions can also be applied to tuples of their arguments. This means that we d
 ```
 
 
-## Documentation
+## `curry`
 
-API documentation is in the source.
+Currying takes a function of >1 parameter and returns a function of one parameter which returns a function of one parameter, and so on. That is, given `(T, U) -> V`, currying returns `T -> U -> V`.
+
+You can use this to do something like [Haskell’s operator sections](https://www.haskell.org/haskellwiki/Section_of_an_infix_operator), applying one operand to a binary operator, e.g. the increment function over integers:
+
+```swift
+map([1, 2, 3], 1 |> curry(+)) // => [2, 3, 4]
+```
+
+We’re using Prelude’s  [`|>`](-and--1) operator here to emphasize the idiom, but you can also write it using normal function application:
+
+```swift
+map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
+```
 
 
-## Integration
+# Documentation
+
+Full API documentation is in the source.
+
+
+# Integration
 
 1. Add this repository as a submodule and check out its dependencies, and/or [add it to your Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile) if you’re using [carthage](https://github.com/Carthage/Carthage/) to manage your dependencies.
 2. Drag `Prelude.xcodeproj` into your project or workspace.
