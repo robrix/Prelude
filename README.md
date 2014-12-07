@@ -112,12 +112,12 @@ map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
 ```
 
 
-## Documentation
+# Documentation
 
 Full API documentation is in the source.
 
 
-## Integration
+# Integration
 
 1. Add this repository as a submodule and check out its dependencies, and/or [add it to your Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile) if you’re using [carthage](https://github.com/Carthage/Carthage/) to manage your dependencies.
 2. Drag `Prelude.xcodeproj` into your project or workspace.
