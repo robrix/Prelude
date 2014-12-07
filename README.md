@@ -1,6 +1,6 @@
 # Prelude
 
-This is a Swift microframework providing a number of simple functions that I use in many of my other frameworks. Rather than continue to reimplement them for each consumer, I am gathering them here together.
+This is a Swift µframework providing a number of simple functions that I use in many of my other frameworks. Rather than continue to reimplement them for each consumer, I am gathering them here together.
 
 Notably, this framework does not provide any new types, or any functions which operate on custom types; those presumably belong in µframeworks of their own.
 
