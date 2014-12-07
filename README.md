@@ -5,14 +5,22 @@ This is a Swift microframework providing a number of simple functions that I use
 Notably, this framework does not provide any new types, or any functions which operate on custom types; those presumably belong in µframeworks of their own.
 
 
-# Use
+## Table of Contents
 
-- [`id`](#id)
-- [`const`](#const)
-- [`>>>` and `<<<`](#-and-)
-- [`fix`](#fix)
-- [`|>` and `<|`](-and--1)
-- [`curry`](#curry)
+- [Gallery](#gallery)
+	- [`id`](#id)
+	- [`const`](#const)
+	- [`>>>` and `<<<`](#-and-)
+	- [`fix`](#fix)
+	- [`|>` and `<|`](-and--1)
+	- [`curry`](#curry)
+- [Documentation](#documentation)
+- [Integration](#integration)
+
+
+# Gallery
+
+Prelude’s functions are infinitely useful. Here’s a gallery of just a few of the things you can do with them.
 
 
 ## `id`
@@ -104,12 +112,12 @@ map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
 ```
 
 
-## Further documentation
+## Documentation
 
-API documentation is in the source.
+Full API documentation is in the source.
 
 
-# Integration
+## Integration
 
 1. Add this repository as a submodule and check out its dependencies, and/or [add it to your Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile) if you’re using [carthage](https://github.com/Carthage/Carthage/) to manage your dependencies.
 2. Drag `Prelude.xcodeproj` into your project or workspace.
