@@ -12,6 +12,7 @@ Notably, this framework does not provide any new types, or any functions which o
 - [`>>>` and `<<<`](#-and-)
 - [`fix`](#fix)
 - [`|>` and `<|`](-and--1)
+- [`curry`](#curry)
 
 
 ### `id`
@@ -83,6 +84,23 @@ Functions can also be applied to tuples of their arguments. This means that we d
 
 ```swift
 (1, 2) |> (+) // => 3
+```
+
+
+### `curry`
+
+Currying takes a function of >1 parameter and returns a function of one parameter which returns a function of one parameter, and so on. That is, given `(T, U) -> V`, currying returns `T -> U -> V`.
+
+You can use this to do something like [Haskell’s operator sections](https://www.haskell.org/haskellwiki/Section_of_an_infix_operator), applying one operand to a binary operator, e.g. the increment function over integers:
+
+```swift
+map([1, 2, 3], 1 |> curry(+)) // => [2, 3, 4]
+```
+
+We’re using Prelude’s  [`|>`](-and--1) operator here to emphasize the idiom, but you can also write it using normal function application:
+
+```swift
+map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
 ```
 
 
