@@ -5,7 +5,7 @@ This is a Swift microframework providing a number of simple functions that I use
 Notably, this framework does not provide any new types, or any functions which operate on custom types; those presumably belong in µframeworks of their own.
 
 
-## Use
+# Use
 
 - [`id`](#id)
 - [`const`](#const)
@@ -15,7 +15,7 @@ Notably, this framework does not provide any new types, or any functions which o
 - [`curry`](#curry)
 
 
-### `id`
+## `id`
 
 Passing `id` as the argument to the `flattenMap` method of a [`Stream`](https://github.com/robrix/Traversal) of `Stream`s will flatten it out into a stream of all the nested elements:
 
@@ -26,7 +26,7 @@ func flatten<T>(stream: Stream<Stream<T>>) -> Stream<T> {
 ```
 
 
-### `const`
+## `const`
 
 Passing the result of `const` to an [`Either`](https://github.com/robrix/Either) is convenient for transforming it into an `Optional<T>`:
 
@@ -38,7 +38,7 @@ if let string = result.either(const(nil), id) {
 ```
 
 
-### `>>>` and `<<<`
+## `>>>` and `<<<`
 
 The left-to-right and right-to-left composition operators (`>>>` and `<<<` respectively) chain operations together:
 
@@ -50,7 +50,7 @@ while true {
 ```
 
 
-### `fix`
+## `fix`
 
 You can use `fix` to make an anonymous function which calls itself recursively:
 
@@ -60,7 +60,7 @@ let factorial = fix { recur in
 }
 ```
 
-### `|>` and `<|`
+## `|>` and `<|`
 
 The forward and backward application operators (`|>` and `<|` respectively) apply the function on the side they’re pointing at to the value on the other side.
 
@@ -87,7 +87,7 @@ Functions can also be applied to tuples of their arguments. This means that we d
 ```
 
 
-### `curry`
+## `curry`
 
 Currying takes a function of >1 parameter and returns a function of one parameter which returns a function of one parameter, and so on. That is, given `(T, U) -> V`, currying returns `T -> U -> V`.
 
@@ -104,12 +104,12 @@ map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
 ```
 
 
-## Documentation
+## Further documentation
 
 API documentation is in the source.
 
 
-## Integration
+# Integration
 
 1. Add this repository as a submodule and check out its dependencies, and/or [add it to your Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile) if you’re using [carthage](https://github.com/Carthage/Carthage/) to manage your dependencies.
 2. Drag `Prelude.xcodeproj` into your project or workspace.
