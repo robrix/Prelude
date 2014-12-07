@@ -14,6 +14,7 @@
 		D4BC08F31A3385BE007D52F8 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BC08F21A3385BE007D52F8 /* Application.swift */; };
 		D4BC08F51A3385CC007D52F8 /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BC08F41A3385CC007D52F8 /* ApplicationTests.swift */; };
 		D4C9A1171A34D5E5009C6CD3 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9A1161A34D5E5009C6CD3 /* Flip.swift */; };
+		D4C9A1191A34D606009C6CD3 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9A1181A34D606009C6CD3 /* FlipTests.swift */; };
 		D4D33D8819FE8F8C001D051D /* Prelude.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D33D8719FE8F8C001D051D /* Prelude.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D33D8E19FE8F8C001D051D /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D33D8219FE8F8C001D051D /* Prelude.framework */; };
 		D4D33D9519FE8F8C001D051D /* PreludeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D33D9419FE8F8C001D051D /* PreludeTests.swift */; };
@@ -40,6 +41,7 @@
 		D4BC08F21A3385BE007D52F8 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		D4BC08F41A3385CC007D52F8 /* ApplicationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTests.swift; sourceTree = "<group>"; };
 		D4C9A1161A34D5E5009C6CD3 /* Flip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flip.swift; sourceTree = "<group>"; };
+		D4C9A1181A34D606009C6CD3 /* FlipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
 		D4D33D8219FE8F8C001D051D /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D33D8619FE8F8C001D051D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D33D8719FE8F8C001D051D /* Prelude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prelude.h; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				D4BAEF841A2D609A006E25DF /* ComposeTests.swift */,
 				D4E7A80A1A2D3A740080A4DF /* CurryTests.swift */,
 				D4BAF0431A2E79E5006E25DF /* FixTests.swift */,
+				D4C9A1181A34D606009C6CD3 /* FlipTests.swift */,
 				D4D33D9219FE8F8C001D051D /* Supporting Files */,
 			);
 			path = PreludeTests;
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C9A1191A34D606009C6CD3 /* FlipTests.swift in Sources */,
 				D4D33D9519FE8F8C001D051D /* PreludeTests.swift in Sources */,
 				D4E7A80B1A2D3A740080A4DF /* CurryTests.swift in Sources */,
 				D4BC08F51A3385CC007D52F8 /* ApplicationTests.swift in Sources */,
