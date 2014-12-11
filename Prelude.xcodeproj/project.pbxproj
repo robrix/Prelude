@@ -652,6 +652,7 @@
 				547B48221A39A78300B60CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		547B48261A39A78300B60CA9 /* Build configuration list for PBXNativeTarget "Prelude-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +661,7 @@
 				547B48241A39A78300B60CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4D33D7C19FE8F8C001D051D /* Build configuration list for PBXProject "Prelude" */ = {
 			isa = XCConfigurationList;
