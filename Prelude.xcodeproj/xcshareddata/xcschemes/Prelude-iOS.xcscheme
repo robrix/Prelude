@@ -15,17 +15,17 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "547B480D1A39A78200B60CA9"
-               BuildableName = "Prelude-iOS.framework"
+               BuildableName = "Prelude.framework"
                BlueprintName = "Prelude-iOS"
                ReferencedContainer = "container:Prelude.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "547B48171A39A78300B60CA9"
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "547B480D1A39A78200B60CA9"
-            BuildableName = "Prelude-iOS.framework"
+            BuildableName = "Prelude.framework"
             BlueprintName = "Prelude-iOS"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "547B480D1A39A78200B60CA9"
-            BuildableName = "Prelude-iOS.framework"
+            BuildableName = "Prelude.framework"
             BlueprintName = "Prelude-iOS"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "547B480D1A39A78200B60CA9"
-            BuildableName = "Prelude-iOS.framework"
+            BuildableName = "Prelude.framework"
             BlueprintName = "Prelude-iOS"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
