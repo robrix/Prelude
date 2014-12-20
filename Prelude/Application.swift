@@ -6,16 +6,16 @@ infix operator |> {
 	/// Associates to the left so that pipelines behave as expected.
 	associativity left
 
-	/// Minimal precedence.
-	precedence 0
+	/// Higher precedence than assignment.
+	precedence 95
 }
 
 infix operator <| {
 	/// Associates to the right so that pipelines behave as expected.
 	associativity right
 
-	/// Minimal precedence.
-	precedence 0
+	/// Higher precedence than assignment.
+	precedence 95
 }
 
 
