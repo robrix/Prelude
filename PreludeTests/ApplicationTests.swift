@@ -55,7 +55,7 @@ final class ApplicationTests: XCTestCase {
 	}
 
 	func testBackwardPartialTernaryFunctionApplication() {
-		let sum = ((reduce <| (+)) <| 0) <| [1, 2, 3]
-		XCTAssertEqual(sum, 6)
+		let sum: [Int] -> Int = (reduce <| (+)) <| 0
+		XCTAssertEqual([1, 2, 3] |> sum, 6)
 	}
 }
