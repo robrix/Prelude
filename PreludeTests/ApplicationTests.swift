@@ -48,4 +48,14 @@ final class ApplicationTests: XCTestCase {
 		digits += countElements <| toString <| 100
 		XCTAssertEqual(digits, 3)
 	}
+
+	func testBackwardPartialBinaryFunctionApplication() {
+		let strings = (map <| toString) <| [1, 2, 3]
+		XCTAssertEqual(strings, ["1", "2", "3"])
+	}
+
+	func testBackwardPartialTernaryFunctionApplication() {
+		let sum = ((reduce <| (+)) <| 0) <| [1, 2, 3]
+		XCTAssertEqual(sum, 6)
+	}
 }
