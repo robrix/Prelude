@@ -37,3 +37,7 @@ public func |> <T, U> (left: T, right: T -> U) -> U {
 public func <| <T, U> (left: T -> U, right: T) -> U {
 	return left(right)
 }
+
+public func <| <T, U, V> (left: (T, U) -> V, right: U) -> T -> V {
+	return { left($0, right) }
+}
