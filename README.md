@@ -73,7 +73,7 @@ let factorial = fix { recur in
 
 The forward and backward application operators (`|>` and `<|` respectively) apply the function on the side they’re pointing at to the value on the other side.
 
-This can sometimes make code more readable. This is particularly the case for the forward application operator since it reads left-to-right, presenting the data flow in the natural order for e.g. English text:
+This can sometimes make code more readable. This is particularly the case for the forward application operator. `x |> f` is equivalent to `f(x)`, but it reads in the direction that the data flows. The benefit is more obvious with longer function names:
 
 ```swift
 100 |> toString |> countElements // => 3
