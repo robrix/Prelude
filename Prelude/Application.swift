@@ -11,8 +11,8 @@ infix operator |> {
 }
 
 infix operator <| {
-	/// Associates to the right so that pipelines behave as expected.
-	associativity right
+	/// Associates to the left so that partial application behaves as expected.
+	associativity left
 
 	/// Higher precedence than assignment.
 	precedence 95
