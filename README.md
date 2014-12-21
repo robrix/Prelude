@@ -117,11 +117,11 @@ This is particularly useful when making more interesting functions such as [`<|`
 
 ## `flip`
 
-Faux operator sectioning using `curry` might be a little surprising using non-commutative operators, for example `-` and `/`: `1 |> curry(-)` means `{ 1 - $0 }`, which is very different from `{ $0 - 1 }`. You can use `flip` to get the latter:
+Faux operator sectioning using `<|` might be a little surprising using non-commutative operators like `-` and `/`: `(-) <| 1` means `{ 1 - $0 }`, which is very different from `{ $0 - 1 }`. You can use `flip` to produce the latter:
 
 ```swift
-map([1, 2, 3], 1 |> curry(-)) // => [0, -1, -2]
-map([1, 2, 3], 1 |> curry(flip(-))) // => [0, 1, 2]
+map([1, 2, 3], (-) <| 1) // => [0, -1, -2]
+map([1, 2, 3], flip(-) <| 1) // => [0, 1, 2]
 ```
 
 
