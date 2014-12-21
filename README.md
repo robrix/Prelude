@@ -12,7 +12,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`const`](#const)
 	- [`>>>` and `<<<`](#-and-)
 	- [`fix`](#fix)
-	- [`|>` and `<|`](-and--1)
+	- [`|>` and `<|`](#-and--1)
 	- [`curry`](#curry)
 	- [`flip`](#flip)
 - [Documentation](#documentation)
@@ -106,7 +106,7 @@ You can use this to do something like [Haskell’s operator sections](https://ww
 map([1, 2, 3], 1 |> curry(+)) // => [2, 3, 4]
 ```
 
-We’re using Prelude’s  [`|>`](-and--1) operator here to emphasize the idiom, but you can also write it using normal function application:
+We’re using Prelude’s  [`|>`](#-and--1) operator here to emphasize the idiom, but you can also write it using normal function application:
 
 ```swift
 map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
