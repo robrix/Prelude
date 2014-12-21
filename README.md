@@ -77,9 +77,7 @@ This can sometimes make code more readable. This is particularly the case for th
 
 ```swift
 100 |> toString |> countElements // => 3
-// vs.
-countElements <| toString <| 100
-// which means the same thing as
+// this is equivalent to
 countElements(toString(100))
 ```
 
