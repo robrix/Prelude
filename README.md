@@ -81,10 +81,15 @@ This can sometimes make code more readable. This is particularly the case for th
 countElements(toString(100))
 ```
 
-These operators have lower precedence than the composition operators, which enables us to use them with composed functions. For example, we could also have written the above example as:
+Backward application reads in the wrong direction for this—`f <| x` isn’t really any improvement on `f(x)`. Unlike forward application, however, `<|` can apply binary and ternary functions to their first operand. Combining it with [`flip`](#flip) is a great way to compose with higher-order functions like `sorted`, `map`, and `reduce`:
 
 ```swift
-100 |> toString >>> countElements
+[66, 78, 1, 95, 76]
+|>	(flip(sorted) <| (<))
+|>	(flip(map) <| toString)
+|>	String.join(", ")
+
+let sum: [Int] -> Int = flip(reduce) <| (+) <| 0
 ```
 
 Since Swift functions can also be applied to tuples of their arguments, you can also use `|>` and `<|` with binary, ternary, etc. functions just by placing a tuple on the other side:
