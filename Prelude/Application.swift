@@ -24,6 +24,10 @@ infix operator <| {
 /// Forward function application.
 ///
 /// Applies the function on the right to the value on the left. Functions of >1 argument can be applied by placing their arguments in a tuple on the left hand side.
+///
+/// This is a useful way of clarifying the flow of data through a series of functions. For example, you can use this to count the base-10 digits of an integer:
+///
+///		let digits = 100 |> toString |> countElements // => 3
 public func |> <T, U> (left: T, right: T -> U) -> U {
 	return right(left)
 }
