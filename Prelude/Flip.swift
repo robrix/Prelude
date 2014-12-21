@@ -6,3 +6,10 @@
 public func flip<T, U, V>(f: (T, U) -> V) -> (U, T) -> V {
 	return { f($1, $0) }
 }
+
+/// Returns a ternary function which calls `f` with its arguments reversed.
+///
+/// I.e. `flip(f)(x, y, z)` is equivalent to `f(z, y, x)`
+public func flip<T, U, V, W>(f: (T, U, V) -> W) -> (V, U, T) -> W {
+	return { f($2, $1, $0) }
+}
