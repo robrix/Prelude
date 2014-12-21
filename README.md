@@ -81,13 +81,22 @@ This can sometimes make code more readable. This is particularly the case for th
 countElements(toString(100))
 ```
 
-Backward application reads in the wrong direction for this—`f <| x` isn’t really any improvement on `f(x)`. Unlike forward application, however, `<|` can apply binary and ternary functions to their first operand. Combining it with [`flip`](#flip) is a great way to compose with higher-order functions like `sorted`, `map`, and `reduce`:
+Backward application reads in the wrong direction for this—`f <| x` isn’t really any improvement on `f(x)`. Unlike forward application, however, `<|` can apply binary and ternary functions to their first operands. This enables you to make something like [Haskell’s operator sections](https://www.haskell.org/haskellwiki/Section_of_an_infix_operator):
 
 ```swift
-[66, 78, 1, 95, 76]
-|>	(flip(sorted) <| (<))
-|>	(flip(map) <| toString)
-|>	String.join(", ")
+let successor: Int -> Int = (+) <| 1
+successor(3) // => 4
+map([1, 2, 3], (*) <| 2) // => [2, 4, 6]
+```
+
+You can also combine `|>` and `<|` with [`flip`](#flip) to pass data through chains of higher-order functions like `sorted`, `map`, and `reduce`:
+
+```swift
+let result =
+	[66, 78, 1, 95, 76]
+|>	(flip(sorted) <| (<)) // sort in ascending order
+|>	(flip(map) <| toString) // make them into strings
+|>	String.join(", ") // comma-separate them
 
 let sum: [Int] -> Int = flip(reduce) <| (+) <| 0
 ```
