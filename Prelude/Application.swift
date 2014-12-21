@@ -42,10 +42,20 @@ public func <| <T, U> (left: T -> U, right: T) -> U {
 	return left(right)
 }
 
+/// Backward binary function application.
+///
+/// Applies the function on the left to the value on the right, returning a unary function.
+///
+/// This is a useful way of partially applying a function in the manner of Haskell’s operator sections:
+///
+///		let incremented = map([1, 2, 3], (+) <| 1) // => [2, 3, 4]
 public func <| <T, U, V> (left: (T, U) -> V, right: T) -> U -> V {
 	return curry(left) <| right
 }
 
+/// Backward ternary function application.
+///
+/// Applies the function on the left to the value on the right, returning a binary function.
 public func <| <T, U, V, W> (left: (T, U, V) -> W, right: T) -> (U, V) -> W {
 	return uncurry(curry(left) <| right)
 }
