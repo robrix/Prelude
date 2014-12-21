@@ -87,7 +87,7 @@ These operators have lower precedence than the composition operators, which enab
 100 |> toString >>> countElements
 ```
 
-Functions can also be applied to tuples of their arguments, so you can use `|>` and `<|` with binary, ternary, etc. functions just by placing a tuple on the other side:
+Since Swift functions can also be applied to tuples of their arguments, you can also use `|>` and `<|` with binary, ternary, etc. functions just by placing a tuple on the other side:
 
 ```swift
 (1, 2) |> (+) // => 3
