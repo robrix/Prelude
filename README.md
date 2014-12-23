@@ -12,7 +12,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`const`](#const)
 	- [`>>>` and `<<<`](#-and-)
 	- [`fix`](#fix)
-	- [`|>` and `<|`](-and--1)
+	- [`|>` and `<|`](#-and--1)
 	- [`curry`](#curry)
 	- [`flip`](#flip)
 - [Documentation](#documentation)
@@ -73,23 +73,35 @@ let factorial = fix { recur in
 
 The forward and backward application operators (`|>` and `<|` respectively) apply the function on the side they’re pointing at to the value on the other side.
 
-This can sometimes make code more readable. This is particularly the case for the forward application operator since it reads left-to-right, presenting the data flow in the natural order for e.g. English text:
+This can sometimes make code more readable. This is particularly the case for the forward application operator. `x |> f` is equivalent to `f(x)`, but it reads in the direction that the data flows. The benefit is more obvious with longer function names:
 
 ```swift
 100 |> toString |> countElements // => 3
-// vs.
-countElements <| toString <| 100
-// which means the same thing as
+// this is equivalent to
 countElements(toString(100))
 ```
 
-These operators have lower precedence than the composition operators, which enables us to use them with composed functions. For example, we could also have written the above example as:
+Backward application reads in the wrong direction for this—`f <| x` isn’t really any improvement on `f(x)`. Unlike forward application, however, `<|` can apply binary and ternary functions to their first operands. This enables you to make something like [Haskell’s operator sections](https://www.haskell.org/haskellwiki/Section_of_an_infix_operator):
 
 ```swift
-100 |> toString >>> countElements
+let successor: Int -> Int = (+) <| 1
+successor(3) // => 4
+map([1, 2, 3], (*) <| 2) // => [2, 4, 6]
 ```
 
-Functions can also be applied to tuples of their arguments. This means that we don’t need special cases of these operators to handle binary, ternary, etc. operators (as is necessary in F# for example). You can use `|>` and `<|` with binary functions just by placing a tuple on the other side:
+You can also combine `|>` and `<|` with [`flip`](#flip) to pass data through chains of higher-order functions like `sorted`, `map`, and `reduce`:
+
+```swift
+let result =
+	[66, 78, 1, 95, 76]
+|>	(flip(sorted) <| (<)) // sort in ascending order
+|>	(flip(map) <| toString) // make them into strings
+|>	String.join(", ") // comma-separate them
+
+let sum: [Int] -> Int = flip(reduce) <| (+) <| 0
+```
+
+Since Swift functions can also be applied to tuples of their arguments, you can also use `|>` and `<|` with binary, ternary, etc. functions just by placing a tuple on the other side:
 
 ```swift
 (1, 2) |> (+) // => 3
@@ -100,26 +112,16 @@ Functions can also be applied to tuples of their arguments. This means that we d
 
 Currying takes a function of >1 parameter and returns a function of one parameter which returns a function of one parameter, and so on. That is, given `(T, U) -> V`, currying returns `T -> U -> V`.
 
-You can use this to do something like [Haskell’s operator sections](https://www.haskell.org/haskellwiki/Section_of_an_infix_operator), applying one operand to a binary operator, e.g. the increment function over integers:
-
-```swift
-map([1, 2, 3], 1 |> curry(+)) // => [2, 3, 4]
-```
-
-We’re using Prelude’s  [`|>`](-and--1) operator here to emphasize the idiom, but you can also write it using normal function application:
-
-```swift
-map([1, 2, 3], curry(+)(1)) // => [2, 3, 4]
-```
+This is particularly useful when making more interesting functions such as [`<|`](#-and--1).
 
 
 ## `flip`
 
-Faux operator sectioning using `curry` might be a little surprising using non-commutative operators, for example `-` and `/`: `1 |> curry(-)` means `{ 1 - $0 }`, which is very different from `{ $0 - 1 }`. You can use `flip` to get the latter:
+Faux operator sectioning using `<|` might be a little surprising using non-commutative operators like `-` and `/`: `(-) <| 1` means `{ 1 - $0 }`, which is very different from `{ $0 - 1 }`. You can use `flip` to produce the latter:
 
 ```swift
-map([1, 2, 3], 1 |> curry(-)) // => [0, -1, -2]
-map([1, 2, 3], 1 |> curry(flip(-))) // => [0, 1, 2]
+map([1, 2, 3], (-) <| 1) // => [0, -1, -2]
+map([1, 2, 3], flip(-) <| 1) // => [0, 1, 2]
 ```
 
 

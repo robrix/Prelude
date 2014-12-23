@@ -30,7 +30,7 @@ final class ApplicationTests: XCTestCase {
 	// MARK: Backward function application
 
 	func testBackwardUnaryFunctionApplication() {
-		let digits = countElements <| toString <| 100
+		let digits = countElements <| (toString <| 100)
 		XCTAssertEqual(digits, 3)
 	}
 
@@ -39,13 +39,23 @@ final class ApplicationTests: XCTestCase {
 	}
 
 	func testBackwardPipelineWithMixedArity() {
-		let digits = countElements <| toString <| (+) <| (75, 25)
+		let digits = countElements <| (toString <| ((+) <| (75, 25)))
 		XCTAssertEqual(digits, 3)
 	}
 
 	func testBackwardFunctionApplicationWithAssignment() {
 		var digits = 0
-		digits += countElements <| toString <| 100
+		digits += countElements <| (toString <| 100)
 		XCTAssertEqual(digits, 3)
+	}
+
+	func testBackwardPartialBinaryFunctionApplication() {
+		let strings = flip(map) <| toString <| [1, 2, 3]
+		XCTAssertEqual(strings, ["1", "2", "3"])
+	}
+
+	func testBackwardPartialTernaryFunctionApplication() {
+		let sum: [Int] -> Int = flip(reduce) <| (+) <| 0
+		XCTAssertEqual(sum([1, 2, 3]), 6)
 	}
 }
