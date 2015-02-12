@@ -7,7 +7,7 @@ final class ApplicationTests: XCTestCase {
 	// MARK: Forward function application
 
 	func testForwardUnaryFunctionApplication() {
-		let digits = 100 |> toString |> countElements
+		let digits = 100 |> toString |> count
 		XCTAssertEqual(digits, 3)
 	}
 
@@ -16,13 +16,13 @@ final class ApplicationTests: XCTestCase {
 	}
 
 	func testForwardPipelineWithMixedArity() {
-		let digits = (75, 25) |> (+) |> toString |> countElements
+		let digits = (75, 25) |> (+) |> toString |> count
 		XCTAssertEqual(digits, 3)
 	}
 
 	func testForwardFunctionApplicationWithAssignment() {
 		var digits = 0
-		digits += 100 |> toString |> countElements
+		digits += 100 |> toString |> count
 		XCTAssertEqual(digits, 3)
 	}
 
@@ -30,7 +30,7 @@ final class ApplicationTests: XCTestCase {
 	// MARK: Backward function application
 
 	func testBackwardUnaryFunctionApplication() {
-		let digits = countElements <| (toString <| 100)
+		let digits = count <| (toString <| 100)
 		XCTAssertEqual(digits, 3)
 	}
 
@@ -39,13 +39,13 @@ final class ApplicationTests: XCTestCase {
 	}
 
 	func testBackwardPipelineWithMixedArity() {
-		let digits = countElements <| (toString <| ((+) <| (75, 25)))
+		let digits = count <| (toString <| ((+) <| (75, 25)))
 		XCTAssertEqual(digits, 3)
 	}
 
 	func testBackwardFunctionApplicationWithAssignment() {
 		var digits = 0
-		digits += countElements <| (toString <| 100)
+		digits += count <| (toString <| 100)
 		XCTAssertEqual(digits, 3)
 	}
 

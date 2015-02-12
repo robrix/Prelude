@@ -15,10 +15,10 @@ final class FixTests: XCTestCase {
 		// Swift forbids recursive typealiases, so we use a struct instead of a tuple.
 		struct Fibonacci {
 			let value: Int
-			let next: @autoclosure () -> Fibonacci
+			let next: () -> Fibonacci
 		}
 		let fibonacci: (Int, Int) -> Fibonacci = fix { recur in
-			{ x, y in Fibonacci(value: x + y, next: recur(y, x + y)) }
+			{ x, y in Fibonacci(value: x + y, next: { recur(y, x + y) }) }
 		}
 		XCTAssertEqual(fibonacci(0, 1).value, 1)
 		XCTAssertEqual(fibonacci(0, 1).next().value, 2)
