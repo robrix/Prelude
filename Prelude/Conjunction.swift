@@ -10,8 +10,8 @@ public func &&& <T, U> (left: T?, right: U?) -> (T, U)? {
 // MARK: - Operators
 
 infix operator &&& {
-	/// Matches Haskell’s associativity.
-	associativity right
+	/// Same associativity as &&.
+	associativity left
 
 	/// Same precedence as &&.
 	precedence 120
