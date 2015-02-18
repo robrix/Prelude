@@ -15,6 +15,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`|>` and `<|`](#-and--1)
 	- [`curry`](#curry)
 	- [`flip`](#flip)
+	- [`&&&`](#-)
 - [Documentation](#documentation)
 - [Integration](#integration)
 
@@ -123,6 +124,16 @@ Faux operator sectioning using `<|` might be a little surprising using non-commu
 map([1, 2, 3], (-) <| 1) // => [0, -1, -2]
 map([1, 2, 3], flip(-) <| 1) // => [0, 1, 2]
 ```
+
+
+## `&&&`
+
+`Optional` has a `map` method which is just what you need when you want to apply a function to a value if non-`nil`, or return `nil` otherwise. When you have two `Optional` values, you can use `&&&` to combine them:
+
+```swift
+let (x: Int?, y: Int?) = (2, 2)
+(x &&& y).map(+) // => .Some(4)
+``` 
 
 
 # Documentation
