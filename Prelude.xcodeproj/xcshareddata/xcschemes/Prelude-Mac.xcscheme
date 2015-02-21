@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
-               BuildableName = "Prelude-Mac.framework"
+               BuildableName = "Prelude.framework"
                BlueprintName = "Prelude-Mac"
                ReferencedContainer = "container:Prelude.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
-            BuildableName = "Prelude-Mac.framework"
+            BuildableName = "Prelude.framework"
             BlueprintName = "Prelude-Mac"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
-            BuildableName = "Prelude-Mac.framework"
+            BuildableName = "Prelude.framework"
             BlueprintName = "Prelude-Mac"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
-            BuildableName = "Prelude-Mac.framework"
+            BuildableName = "Prelude.framework"
             BlueprintName = "Prelude-Mac"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>

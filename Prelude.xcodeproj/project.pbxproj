@@ -74,7 +74,7 @@
 		D4D33D8219FE8F8C001D051D /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D33D8619FE8F8C001D051D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D33D8719FE8F8C001D051D /* Prelude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prelude.h; sourceTree = "<group>"; };
-		D4D33D8D19FE8F8C001D051D /* PreludeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreludeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D33D8D19FE8F8C001D051D /* Prelude-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prelude-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D33D9319FE8F8C001D051D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D33D9419FE8F8C001D051D /* PreludeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeTests.swift; sourceTree = "<group>"; };
 		D4D33D9E19FE8FAE001D051D /* Prelude.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prelude.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D4D33D8219FE8F8C001D051D /* Prelude.framework */,
-				D4D33D8D19FE8F8C001D051D /* PreludeTests.xctest */,
+				D4D33D8D19FE8F8C001D051D /* Prelude-MacTests.xctest */,
 				547B480E1A39A78200B60CA9 /* Prelude.framework */,
 				547B48181A39A78300B60CA9 /* Prelude-iOSTests.xctest */,
 			);
@@ -274,7 +274,7 @@
 			);
 			name = "Prelude-MacTests";
 			productName = PreludeTests;
-			productReference = D4D33D8D19FE8F8C001D051D /* PreludeTests.xctest */;
+			productReference = D4D33D8D19FE8F8C001D051D /* Prelude-MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
