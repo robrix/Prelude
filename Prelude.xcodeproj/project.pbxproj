@@ -241,9 +241,9 @@
 			productReference = 547B48181A39A78300B60CA9 /* Prelude-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D4D33D8119FE8F8C001D051D /* Prelude */ = {
+		D4D33D8119FE8F8C001D051D /* Prelude-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4D33D9819FE8F8C001D051D /* Build configuration list for PBXNativeTarget "Prelude" */;
+			buildConfigurationList = D4D33D9819FE8F8C001D051D /* Build configuration list for PBXNativeTarget "Prelude-Mac" */;
 			buildPhases = (
 				D4D33D7D19FE8F8C001D051D /* Sources */,
 				D4D33D7E19FE8F8C001D051D /* Frameworks */,
@@ -254,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = Prelude;
+			name = "Prelude-Mac";
 			productName = Prelude;
 			productReference = D4D33D8219FE8F8C001D051D /* Prelude.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D4D33D8C19FE8F8C001D051D /* PreludeTests */ = {
+		D4D33D8C19FE8F8C001D051D /* Prelude-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4D33D9B19FE8F8C001D051D /* Build configuration list for PBXNativeTarget "PreludeTests" */;
+			buildConfigurationList = D4D33D9B19FE8F8C001D051D /* Build configuration list for PBXNativeTarget "Prelude-MacTests" */;
 			buildPhases = (
 				D4D33D8919FE8F8C001D051D /* Sources */,
 				D4D33D8A19FE8F8C001D051D /* Frameworks */,
@@ -272,7 +272,7 @@
 			dependencies = (
 				D4D33D9019FE8F8C001D051D /* PBXTargetDependency */,
 			);
-			name = PreludeTests;
+			name = "Prelude-MacTests";
 			productName = PreludeTests;
 			productReference = D4D33D8D19FE8F8C001D051D /* PreludeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -312,8 +312,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4D33D8119FE8F8C001D051D /* Prelude */,
-				D4D33D8C19FE8F8C001D051D /* PreludeTests */,
+				D4D33D8119FE8F8C001D051D /* Prelude-Mac */,
+				D4D33D8C19FE8F8C001D051D /* Prelude-MacTests */,
 				547B480D1A39A78200B60CA9 /* Prelude-iOS */,
 				547B48171A39A78300B60CA9 /* Prelude-iOSTests */,
 			);
@@ -418,7 +418,7 @@
 		};
 		D4D33D9019FE8F8C001D051D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4D33D8119FE8F8C001D051D /* Prelude */;
+			target = D4D33D8119FE8F8C001D051D /* Prelude-Mac */;
 			targetProxy = D4D33D8F19FE8F8C001D051D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -590,7 +590,7 @@
 				INFOPLIST_FILE = Prelude/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Prelude;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -609,7 +609,7 @@
 				INFOPLIST_FILE = Prelude/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Prelude;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -676,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4D33D9819FE8F8C001D051D /* Build configuration list for PBXNativeTarget "Prelude" */ = {
+		D4D33D9819FE8F8C001D051D /* Build configuration list for PBXNativeTarget "Prelude-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4D33D9919FE8F8C001D051D /* Debug */,
@@ -685,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4D33D9B19FE8F8C001D051D /* Build configuration list for PBXNativeTarget "PreludeTests" */ = {
+		D4D33D9B19FE8F8C001D051D /* Build configuration list for PBXNativeTarget "Prelude-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4D33D9C19FE8F8C001D051D /* Debug */,
