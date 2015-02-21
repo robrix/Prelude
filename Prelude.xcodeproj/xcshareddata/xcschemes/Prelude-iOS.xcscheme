@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
+               BlueprintIdentifier = "547B480D1A39A78200B60CA9"
                BuildableName = "Prelude.framework"
-               BlueprintName = "Prelude"
+               BlueprintName = "Prelude-iOS"
                ReferencedContainer = "container:Prelude.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4D33D8C19FE8F8C001D051D"
-               BuildableName = "PreludeTests.xctest"
-               BlueprintName = "PreludeTests"
+               BlueprintIdentifier = "547B48171A39A78300B60CA9"
+               BuildableName = "Prelude-iOSTests.xctest"
+               BlueprintName = "Prelude-iOSTests"
                ReferencedContainer = "container:Prelude.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4D33D8C19FE8F8C001D051D"
-               BuildableName = "PreludeTests.xctest"
-               BlueprintName = "PreludeTests"
+               BlueprintIdentifier = "547B48171A39A78300B60CA9"
+               BuildableName = "Prelude-iOSTests.xctest"
+               BlueprintName = "Prelude-iOSTests"
                ReferencedContainer = "container:Prelude.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
+            BlueprintIdentifier = "547B480D1A39A78200B60CA9"
             BuildableName = "Prelude.framework"
-            BlueprintName = "Prelude"
+            BlueprintName = "Prelude-iOS"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
+            BlueprintIdentifier = "547B480D1A39A78200B60CA9"
             BuildableName = "Prelude.framework"
-            BlueprintName = "Prelude"
+            BlueprintName = "Prelude-iOS"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4D33D8119FE8F8C001D051D"
+            BlueprintIdentifier = "547B480D1A39A78200B60CA9"
             BuildableName = "Prelude.framework"
-            BlueprintName = "Prelude"
+            BlueprintName = "Prelude-iOS"
             ReferencedContainer = "container:Prelude.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
