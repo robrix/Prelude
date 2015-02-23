@@ -1,5 +1,13 @@
 //  Copyright (c) 2015 Rob Rix. All rights reserved.
 
+// MARK: - Unit
+
+/// Returns its argument as an `Optional<T>`.
+public func unit<T>(x: T) -> T? {
+	return x
+}
+
+
 // MARK: - Optional conjunction
 
 /// Returns a tuple of two `Optional` values, or `nil` if either or both are `nil`.
