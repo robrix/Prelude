@@ -16,6 +16,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`curry`](#curry)
 	- [`flip`](#flip)
 	- [`&&&`](#-)
+	- [`unit`](#unit)
 - [Documentation](#documentation)
 - [Integration](#integration)
 
@@ -134,6 +135,16 @@ map([1, 2, 3], flip(-) <| 1) // => [0, 1, 2]
 let (x: Int?, y: Int?) = (2, 2)
 (x &&& y).map(+) // => .Some(4)
 ``` 
+
+
+## `unit`
+
+Sometimes you have a function which produces `T`, but you need one which produces `Optional<T>`. `unit` returns its argument wrapped in an `Optional`, so you can compose with it:
+
+```swift
+let (x: Int?, y: Int) = (2, 2)
+(x &&& unit(y)).map(+) // => .Some(4)
+```
 
 
 # Documentation
