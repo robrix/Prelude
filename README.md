@@ -17,6 +17,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`flip`](#flip)
 	- [`&&&`](#-)
 	- [`unit`](#unit)
+	- [`swap`](#swap)
 - [Documentation](#documentation)
 - [Integration](#integration)
 
@@ -144,6 +145,15 @@ Sometimes you have a function which produces `T`, but you need one which produce
 ```swift
 let (x: Int?, y: Int) = (2, 2)
 (x &&& unit(y)).map(+) // => .Some(4)
+```
+
+
+## `swap`
+
+Swift’s tuples are very convenient, but sometimes when you get one, it’s the wrong way around. `swap` does to tuples what `flip` does to functions: it reverses their order.
+
+```swift
+map(enumerate("hello"), swap) // => [(h, 0), (e, 1), (l, 2), (l, 3), (o, 4)]
 ```
 
 

@@ -11,4 +11,8 @@ final class PreludeTests: XCTestCase {
 	func testConst() {
 		XCTAssertEqual(const(0)(1), 0)
 	}
+
+	func testSwap() {
+		XCTAssertEqual(map(enumerate("hello"), swap).count, 5)
+	}
 }
