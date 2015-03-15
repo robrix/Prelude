@@ -11,6 +11,11 @@ final class ApplicationTests: XCTestCase {
 		XCTAssertEqual(digits, 3)
 	}
 
+	func testUnpureForwardUnaryFunctionApplication() {
+		let formatter = NSDateFormatter() |> { $0.timeStyle = .FullStyle }
+		XCTAssertEqual(formatter.timeStyle, NSDateFormatterStyle.FullStyle)
+	}
+
 	func testForwardBinaryFunctionApplication() {
 		XCTAssertEqual((1, 2) |> (+), 3)
 	}

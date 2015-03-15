@@ -33,6 +33,16 @@ public func |> <T, U> (left: T, right: T -> U) -> U {
 }
 
 
+/// Applies the function on the right to the value on the left, but for functions that use the value for side effects instead of transforming it.
+///
+/// This can be a nice way to strap side effects to an expression without having to drop into an imperative style, such as adding configuration to an objects initialization:
+///
+///		lazy var formatter = NSDateFormatter() |> { $0.timeStyle = .FullStyle }
+public func |> <T> (left: T, right: T -> ()) -> T {
+	right(left)
+	return left
+}
+
 // MARK: Backward function application.
 
 /// Backward function application.
