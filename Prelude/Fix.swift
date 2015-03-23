@@ -4,7 +4,7 @@
 ///
 /// This is useful for e.g. making recursive closures without using the two-step assignment dance.
 ///
-/// \param f  - A function which takes a parameter function, and returns a result function. The result function may recur by calling the the parameter function.
+/// \param f  - A function which takes a parameter function, and returns a result function. The result function may recur by calling the parameter function.
 ///
 /// \return  A recursive function.
 public func fix<T, U>(f: (T -> U) -> T -> U) -> T -> U {
