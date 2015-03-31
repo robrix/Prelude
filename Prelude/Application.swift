@@ -38,7 +38,7 @@ public func |> <T, U> (left: T, @noescape right: T -> U) -> U {
 /// Backward function application.
 ///
 /// Applies the function on the left to the value on the right. Functions of >1 argument can be applied by placing their arguments in a tuple on the right hand side.
-public func <| <T, U> (left: T -> U, right: T) -> U {
+public func <| <T, U> (@noescape left: T -> U, right: T) -> U {
 	return left(right)
 }
 
