@@ -12,6 +12,11 @@ public func curry<T, U, V, W>(f: (T, U, V) -> W) -> T -> U -> V -> W {
 	return { x in curry { f(x, $0, $1) } }
 }
 
+/// Curries a quaternary function, `f`, producing a function which can be partially applied.
+public func curry<T, U, V, W, X>(f: (T, U, V, W) -> X) -> T -> U -> V -> W -> X {
+	return { x in curry { f(x, $0, $1, $2) } }
+}
+
 
 // MARK: - Uncurrying
 
