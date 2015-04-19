@@ -166,5 +166,5 @@ Full API documentation is in the source.
 
 1. Add this repository as a submodule and check out its dependencies, and/or [add it to your Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile) if you’re using [carthage](https://github.com/Carthage/Carthage/) to manage your dependencies.
 2. Drag `Prelude.xcodeproj` into your project or workspace.
-3. Link your target against `Prelude.framework` and each of the dependency frameworks.
+3. Link your target against `Prelude.framework`.
 4. Application targets should ensure that the framework gets copied into their application bundle. (Framework targets should instead require the application linking them to include Prelude.)
