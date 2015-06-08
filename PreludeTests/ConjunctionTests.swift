@@ -2,7 +2,7 @@
 
 final class ConjunctionTests: XCTestCase {
 	func testUnitComposition() {
-		let (a: Int?, b: Int) = (2, 2)
+		let (a, b): (Int?, Int) = (2, 2)
 		XCTAssertEqual((a &&& unit(b)).map(+) ?? 0, 4)
 	}
 
