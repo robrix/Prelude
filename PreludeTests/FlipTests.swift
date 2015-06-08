@@ -5,7 +5,7 @@ import XCTest
 
 final class FlipTests: XCTestCase {
 	func testFlip() {
-		XCTAssertEqual(map([1, 2, 3], 1 |> curry(-)), [0, -1, -2])
-		XCTAssertEqual(map([1, 2, 3], 1 |> curry(flip(-))), [0, 1, 2])
+		XCTAssertEqual([1, 2, 3].map(1 |> curry(-)), [0, -1, -2])
+		XCTAssertEqual([1, 2, 3].map(1 |> curry(flip(-))), [0, 1, 2])
 	}
 }
