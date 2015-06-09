@@ -122,7 +122,6 @@
 		D4D33D7819FE8F8C001D051D = {
 			isa = PBXGroup;
 			children = (
-				D47940841B263CA700D3962E /* CoreFoundation.framework */,
 				D4D33D8419FE8F8C001D051D /* Prelude */,
 				D4D33D9119FE8F8C001D051D /* PreludeTests */,
 				D4D33D8319FE8F8C001D051D /* Products */,
@@ -159,6 +158,7 @@
 		D4D33D8519FE8F8C001D051D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D47940841B263CA700D3962E /* CoreFoundation.framework */,
 				D4D33D8619FE8F8C001D051D /* Info.plist */,
 			);
 			name = "Supporting Files";
