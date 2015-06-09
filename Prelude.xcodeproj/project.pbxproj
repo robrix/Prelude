@@ -25,6 +25,7 @@
 		D461E3F81A943E26005E6A15 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461E3F61A943DA6005E6A15 /* Optional.swift */; };
 		D461E3FA1A944388005E6A15 /* ConjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461E3F91A944388005E6A15 /* ConjunctionTests.swift */; };
 		D461E3FB1A9447A3005E6A15 /* ConjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461E3F91A944388005E6A15 /* ConjunctionTests.swift */; };
+		D47940851B263CA700D3962E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47940841B263CA700D3962E /* CoreFoundation.framework */; };
 		D4BAEF831A2D6091006E25DF /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAEF821A2D6091006E25DF /* Compose.swift */; };
 		D4BAEF851A2D609A006E25DF /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAEF841A2D609A006E25DF /* ComposeTests.swift */; };
 		D4BAF0421A2E79D6006E25DF /* Fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAF0411A2E79D6006E25DF /* Fix.swift */; };
@@ -63,6 +64,7 @@
 		547B48181A39A78300B60CA9 /* Prelude-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prelude-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D461E3F61A943DA6005E6A15 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		D461E3F91A944388005E6A15 /* ConjunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConjunctionTests.swift; sourceTree = "<group>"; };
+		D47940841B263CA700D3962E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D4BAEF821A2D6091006E25DF /* Compose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
 		D4BAEF841A2D609A006E25DF /* ComposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
 		D4BAF0411A2E79D6006E25DF /* Fix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fix.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47940851B263CA700D3962E /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +158,7 @@
 		D4D33D8519FE8F8C001D051D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D47940841B263CA700D3962E /* CoreFoundation.framework */,
 				D4D33D8619FE8F8C001D051D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -283,6 +287,7 @@
 		D4D33D7919FE8F8C001D051D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Rob Rix";
 				TargetAttributes = {
@@ -469,10 +474,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = PreludeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,10 +485,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = PreludeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,6 +512,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 4;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -561,6 +559,7 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

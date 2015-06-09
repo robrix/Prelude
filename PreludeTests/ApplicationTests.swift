@@ -59,3 +59,20 @@ final class ApplicationTests: XCTestCase {
 		XCTAssertEqual(sum([1, 2, 3]), 6)
 	}
 }
+
+
+func toString<T>(x: T) -> String {
+	return String(x)
+}
+
+func count(string: String) -> Int {
+	return string.characters.count
+}
+
+func map<S: SequenceType, T>(sequence: S, _ transform: S.Generator.Element -> T) -> [T] {
+	return sequence.map(transform)
+}
+
+func reduce<S: SequenceType, T>(sequence: S, initial: T, @noescape combine: (T, S.Generator.Element) -> T) -> T {
+	return sequence.reduce(initial, combine: combine)
+}
