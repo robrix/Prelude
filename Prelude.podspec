@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'Prelude'
-  spec.version          = '1.5.0'
+  spec.version          = '1.6.0'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage         = 'https://github.com/robrix/Prelude'
   spec.authors          = { 'Rob Rix' => 'rob.rix@github.com' }
