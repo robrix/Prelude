@@ -18,6 +18,7 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`&&&`](#-)
 	- [`unit`](#unit)
 	- [`swap`](#swap)
+	- [`first` and `second`](#first-and-second)
 - [Documentation](#documentation)
 - [Integration](#integration)
 
@@ -135,7 +136,7 @@ map([1, 2, 3], flip(-) <| 1) // => [0, 1, 2]
 ```swift
 let (x: Int?, y: Int?) = (2, 2)
 (x &&& y).map(+) // => .Some(4)
-``` 
+```
 
 
 ## `unit`
@@ -158,7 +159,7 @@ map(enumerate("hello"), swap) // => [(h, 0), (e, 1), (l, 2), (l, 3), (o, 4)]
 
 ## `first` and `second`
 
-Getting one value from a tuple is a common operation that can be expressed with `first` and `second` functions. Operators provide first and second values of two-elements tuple accordingly. 
+Getting one value from a tuple is a common operation that can be expressed with `first` and `second` functions. Operators provide first and second values of two-elements tuple accordingly.
 
 ```swift
 [(0,0), (5, 1), (9, 2)].map(second) // => [0, 1, 2]
