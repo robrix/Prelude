@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1168F80C1CF91A7E00DE07DC /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80B1CF91A7E00DE07DC /* Tuple.swift */; };
+		1168F80E1CF91B1700DE07DC /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80D1CF91B1700DE07DC /* TupleTests.swift */; };
+		1168F80F1CF91B1700DE07DC /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80D1CF91B1700DE07DC /* TupleTests.swift */; };
+		1168F8101CF91F2200DE07DC /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80B1CF91A7E00DE07DC /* Tuple.swift */; };
 		547B48191A39A78300B60CA9 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547B480E1A39A78200B60CA9 /* Prelude.framework */; };
 		547B48271A39A7B400B60CA9 /* Prelude.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D33D8719FE8F8C001D051D /* Prelude.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547B48281A39A7BD00B60CA9 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D33D9E19FE8FAE001D051D /* Prelude.swift */; };
@@ -60,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1168F80B1CF91A7E00DE07DC /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		1168F80D1CF91B1700DE07DC /* TupleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TupleTests.swift; sourceTree = "<group>"; };
 		547B480E1A39A78200B60CA9 /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547B48181A39A78300B60CA9 /* Prelude-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prelude-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D461E3F61A943DA6005E6A15 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				D4BAF0411A2E79D6006E25DF /* Fix.swift */,
 				D4C9A1161A34D5E5009C6CD3 /* Flip.swift */,
 				D461E3F61A943DA6005E6A15 /* Optional.swift */,
+				1168F80B1CF91A7E00DE07DC /* Tuple.swift */,
 				D4D33D8519FE8F8C001D051D /* Supporting Files */,
 			);
 			path = Prelude;
@@ -174,6 +181,7 @@
 				D4E7A80A1A2D3A740080A4DF /* CurryTests.swift */,
 				D4BAF0431A2E79E5006E25DF /* FixTests.swift */,
 				D4C9A1181A34D606009C6CD3 /* FlipTests.swift */,
+				1168F80D1CF91B1700DE07DC /* TupleTests.swift */,
 				D4D33D9219FE8F8C001D051D /* Supporting Files */,
 			);
 			path = PreludeTests;
@@ -361,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F8101CF91F2200DE07DC /* Tuple.swift in Sources */,
 				547B48291A39A7BD00B60CA9 /* Application.swift in Sources */,
 				547B482A1A39A7BD00B60CA9 /* Compose.swift in Sources */,
 				D461E3F81A943E26005E6A15 /* Optional.swift in Sources */,
@@ -375,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F80F1CF91B1700DE07DC /* TupleTests.swift in Sources */,
 				547B48331A39A7EF00B60CA9 /* FlipTests.swift in Sources */,
 				547B482F1A39A7EF00B60CA9 /* ApplicationTests.swift in Sources */,
 				547B482E1A39A7EF00B60CA9 /* PreludeTests.swift in Sources */,
@@ -389,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F80C1CF91A7E00DE07DC /* Tuple.swift in Sources */,
 				D4BC08F31A3385BE007D52F8 /* Application.swift in Sources */,
 				D4D33D9F19FE8FAE001D051D /* Prelude.swift in Sources */,
 				D461E3F71A943DA6005E6A15 /* Optional.swift in Sources */,
@@ -403,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F80E1CF91B1700DE07DC /* TupleTests.swift in Sources */,
 				D4C9A1191A34D606009C6CD3 /* FlipTests.swift in Sources */,
 				D4D33D9519FE8F8C001D051D /* PreludeTests.swift in Sources */,
 				D4E7A80B1A2D3A740080A4DF /* CurryTests.swift in Sources */,
