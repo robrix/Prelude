@@ -2,7 +2,7 @@
 
 // MARK: Operators
 
-precedencegroup Association {
+precedencegroup Application {
 	/// Associates to the left so that pipelines behave as expected.
 	associativity: left
 	
@@ -10,8 +10,8 @@ precedencegroup Association {
 	higherThan: AssignmentPrecedence
 }
 
-infix operator |> : Association
-infix operator <| : Association
+infix operator |> : Application
+infix operator <| : Application
 
 
 // MARK: Forward function application
