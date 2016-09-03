@@ -2,21 +2,16 @@
 
 // MARK: Operators
 
-infix operator |> {
+precedencegroup Association {
 	/// Associates to the left so that pipelines behave as expected.
-	associativity left
-
+	associativity: left
+	
 	/// Higher precedence than assignment.
-	precedence 95
+	higherThan: AssignmentPrecedence
 }
 
-infix operator <| {
-	/// Associates to the left so that partial application behaves as expected.
-	associativity left
-
-	/// Higher precedence than assignment.
-	precedence 95
-}
+infix operator |> : Association
+infix operator <| : Association
 
 
 // MARK: Forward function application
