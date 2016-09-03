@@ -11,7 +11,7 @@ public func unit<T>(x: T) -> T? {
 // MARK: - Optional conjunction
 
 /// Returns a tuple of two `Optional` values, or `nil` if either or both are `nil`.
-public func &&& <T, U> (left: T?, @autoclosure right: () -> U?) -> (T, U)? {
+public func &&& <T, U> (left: T?, right: @autoclosure () -> U?) -> (T, U)? {
 	if let x = left, let y = right() {
 		return (x, y)
 	}
@@ -21,10 +21,5 @@ public func &&& <T, U> (left: T?, @autoclosure right: () -> U?) -> (T, U)? {
 
 // MARK: - Operators
 
-infix operator &&& {
-	/// Same associativity as &&.
-	associativity left
-
-	/// Same precedence as &&.
-	precedence 120
-}
+/// Same associativity and precedence as &&.
+infix operator &&& : LogicalConjunctionPrecedence
