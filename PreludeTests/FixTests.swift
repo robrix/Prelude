@@ -17,7 +17,7 @@ final class FixTests: XCTestCase {
 			let value: Int
 			let next: () -> Fibonacci
 		}
-		let fibonacci: (Int, Int) -> Fibonacci = fix { recur in
+		let fibonacci: (Int, Int) -> Fibonacci = fix { (recur: @escaping (Int, Int) -> Fibonacci) in
 			{ x, y in Fibonacci(value: x + y, next: { recur(y, x + y) }) }
 		}
 		XCTAssertEqual(fibonacci(0, 1).value, 1)

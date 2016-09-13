@@ -7,7 +7,7 @@ final class CurryTests: XCTestCase {
 	// MARK: - Currying
 
 	func testBinaryCurrying() {
-		let f: Int -> Int -> Bool = curry(==)
+		let f: (Int) -> (Int) -> Bool = curry(==)
 		XCTAssertTrue(f(0)(0))
 		XCTAssertFalse(f(1)(0))
 		XCTAssertTrue(f(1)(1))
@@ -15,7 +15,7 @@ final class CurryTests: XCTestCase {
 	}
 
 	func testTernaryCurrying() {
-		let f: [Int] -> Int -> ((Int, Int) -> Int) -> Int = curry(reduce)
+		let f: ([Int]) -> (Int) -> ((Int, Int) -> Int) -> Int = curry(reduce)
 		XCTAssertEqual(f([1, 2, 3])(0)(+), 6)
 	}
 
@@ -23,7 +23,7 @@ final class CurryTests: XCTestCase {
 	// MARK: - Uncurrying
 
 	func testBinaryUncurrying() {
-		let f: Int -> Int -> Bool = curry(==)
+		let f: (Int) -> (Int) -> Bool = curry(==)
 		let g = uncurry(f)
 		XCTAssertTrue(g(0, 0))
 		XCTAssertFalse(g(1, 0))
@@ -34,7 +34,7 @@ final class CurryTests: XCTestCase {
 	func testTernaryUncurrying() {
 		typealias ArgumentsTuple = ([Int], Int, (Int, Int) -> Int)
 		let arguments: ArgumentsTuple = ([1, 2, 3], 0, +)
-		let f: ArgumentsTuple -> Int = uncurry(curry(reduce))
-		XCTAssertEqual((reduce as ArgumentsTuple -> Int)(arguments), f(arguments))
+		let f: (ArgumentsTuple) -> Int = uncurry(curry(reduce))
+		XCTAssertEqual((reduce as (ArgumentsTuple) -> Int)(arguments), f(arguments))
 	}
 }

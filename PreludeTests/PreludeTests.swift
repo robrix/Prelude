@@ -13,6 +13,6 @@ final class PreludeTests: XCTestCase {
 	}
 
 	func testSwap() {
-		XCTAssertEqual("hello".characters.enumerate().map(swap).count, 5)
+		XCTAssertEqual("hello".characters.enumerated().map(swap).count, 5)
 	}
 }

@@ -7,6 +7,6 @@
 /// \param f  - A function which takes a parameter function, and returns a result function. The result function may recur by calling the parameter function.
 ///
 /// \return  A recursive function.
-public func fix<T, U>(_ f: @escaping ((T) -> U) -> (T) -> U) -> (T) -> U {
+public func fix<T, U>(_ f: @escaping (@escaping (T) -> U) -> (T) -> U) -> (T) -> U {
 	return { f(fix(f))($0) }
 }
