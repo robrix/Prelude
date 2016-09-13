@@ -5,7 +5,7 @@ import XCTest
 
 final class ComposeTests: XCTestCase {
 	func testRightToLeftCompositionOfUnaryOnUnary() {
-		let composed: [Int] -> Int = (count <<< toString)
+		let composed: ([Int]) -> Int = (count <<< toString)
 		XCTAssertEqual(composed([4]), 3)
 	}
 
@@ -20,7 +20,7 @@ final class ComposeTests: XCTestCase {
 	}
 
 	func testLeftToRightCompositionOfUnaryOnUnary() {
-		let composed: [Int] -> Int = (toString >>> count)
+		let composed: ([Int]) -> Int = (toString >>> count)
 		XCTAssertEqual(composed([4]), 3)
 	}
 

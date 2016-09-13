@@ -55,24 +55,24 @@ final class ApplicationTests: XCTestCase {
 	}
 
 	func testBackwardPartialTernaryFunctionApplication() {
-		let sum: [Int] -> Int = flip(reduce) <| (+) <| 0
+		let sum: ([Int]) -> Int = flip(reduce) <| (+) <| 0
 		XCTAssertEqual(sum([1, 2, 3]), 6)
 	}
 }
 
 
 func toString<T>(x: T) -> String {
-	return String(x)
+	return String(describing: x)
 }
 
 func count(string: String) -> Int {
 	return string.characters.count
 }
 
-func map<S: SequenceType, T>(sequence: S, _ transform: S.Generator.Element -> T) -> [T] {
+func map<S: Sequence, T>(sequence: S, _ transform: (S.Iterator.Element) -> T) -> [T] {
 	return sequence.map(transform)
 }
 
-func reduce<S: SequenceType, T>(sequence: S, initial: T, @noescape combine: (T, S.Generator.Element) -> T) -> T {
-	return sequence.reduce(initial, combine: combine)
+func reduce<S: Sequence, T>(sequence: S, initial: T, combine: (T, S.Iterator.Element) -> T) -> T {
+	return sequence.reduce(initial, combine)
 }
