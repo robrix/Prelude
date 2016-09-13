@@ -2,10 +2,10 @@
 
 // MARK: - Components extraction
 
-public func first<T, U>(tuple: (T, U)) -> T {
+public func first<T, U>(_ tuple: (T, U)) -> T {
     return tuple.0
 }
 
-public func second<T, U>(tuple: (T, U)) -> U {
+public func second<T, U>(_ tuple: (T, U)) -> U {
     return tuple.1
 }

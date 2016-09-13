@@ -3,7 +3,7 @@
 // MARK: - Unit
 
 /// Returns its argument as an `Optional<T>`.
-public func unit<T>(x: T) -> T? {
+public func unit<T>(_ x: T) -> T? {
 	return x
 }
 
