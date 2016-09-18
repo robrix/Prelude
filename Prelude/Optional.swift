@@ -3,6 +3,7 @@
 // MARK: - Unit
 
 /// Returns its argument as an `Optional<T>`.
+@available(*, deprecated, message: "Use Optional.Some")
 public func unit<T>(_ x: T) -> T? {
 	return x
 }
