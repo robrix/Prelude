@@ -2,16 +2,20 @@
 
 // MARK: Operators
 
-precedencegroup Application {
-	/// Associates to the left so that pipelines behave as expected.
+precedencegroup ForwardApplication {
+	/// Associates to the left so that pipeline behaves as expected.
 	associativity: left
-	
-	/// Higher precedence than assignment.
 	higherThan: AssignmentPrecedence
 }
 
-infix operator |> : Application
-infix operator <| : Application
+precedencegroup BackwardApplication {
+	/// Associates to the right as `$` in Haskell.
+	associativity: right
+	higherThan: AssignmentPrecedence
+}
+
+infix operator |> : ForwardApplication
+infix operator <| : BackwardApplication
 
 
 // MARK: Forward function application
