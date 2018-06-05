@@ -44,6 +44,25 @@
 		D4D33D9F19FE8FAE001D051D /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D33D9E19FE8FAE001D051D /* Prelude.swift */; };
 		D4E7A8091A2D3A6A0080A4DF /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A8081A2D3A6A0080A4DF /* Curry.swift */; };
 		D4E7A80B1A2D3A740080A4DF /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A80A1A2D3A740080A4DF /* CurryTests.swift */; };
+		D695FC3720C72C1100F69CA5 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80B1CF91A7E00DE07DC /* Tuple.swift */; };
+		D695FC3820C72C1100F69CA5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BC08F21A3385BE007D52F8 /* Application.swift */; };
+		D695FC3920C72C1100F69CA5 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D33D9E19FE8FAE001D051D /* Prelude.swift */; };
+		D695FC3A20C72C1100F69CA5 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461E3F61A943DA6005E6A15 /* Optional.swift */; };
+		D695FC3B20C72C1100F69CA5 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAEF821A2D6091006E25DF /* Compose.swift */; };
+		D695FC3C20C72C1100F69CA5 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A8081A2D3A6A0080A4DF /* Curry.swift */; };
+		D695FC3D20C72C1100F69CA5 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9A1161A34D5E5009C6CD3 /* Flip.swift */; };
+		D695FC3E20C72C1100F69CA5 /* Fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAF0411A2E79D6006E25DF /* Fix.swift */; };
+		D695FC4020C72C1100F69CA5 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47940841B263CA700D3962E /* CoreFoundation.framework */; };
+		D695FC4220C72C1100F69CA5 /* Prelude.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D33D8719FE8F8C001D051D /* Prelude.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D695FC4D20C72C1F00F69CA5 /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80D1CF91B1700DE07DC /* TupleTests.swift */; };
+		D695FC4E20C72C1F00F69CA5 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9A1181A34D606009C6CD3 /* FlipTests.swift */; };
+		D695FC4F20C72C1F00F69CA5 /* PreludeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D33D9419FE8F8C001D051D /* PreludeTests.swift */; };
+		D695FC5020C72C1F00F69CA5 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A80A1A2D3A740080A4DF /* CurryTests.swift */; };
+		D695FC5120C72C1F00F69CA5 /* ConjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461E3F91A944388005E6A15 /* ConjunctionTests.swift */; };
+		D695FC5220C72C1F00F69CA5 /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BC08F41A3385CC007D52F8 /* ApplicationTests.swift */; };
+		D695FC5320C72C1F00F69CA5 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAEF841A2D609A006E25DF /* ComposeTests.swift */; };
+		D695FC5420C72C1F00F69CA5 /* FixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAF0431A2E79E5006E25DF /* FixTests.swift */; };
+		D695FC5620C72C1F00F69CA5 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D33D8219FE8F8C001D051D /* Prelude.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +74,13 @@
 			remoteInfo = "Prelude-iOS";
 		};
 		D4D33D8F19FE8F8C001D051D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D33D7919FE8F8C001D051D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4D33D8119FE8F8C001D051D;
+			remoteInfo = Prelude;
+		};
+		D695FC4B20C72C1F00F69CA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D33D7919FE8F8C001D051D /* Project object */;
 			proxyType = 1;
@@ -88,6 +114,8 @@
 		D4D33D9E19FE8FAE001D051D /* Prelude.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prelude.swift; sourceTree = "<group>"; };
 		D4E7A8081A2D3A6A0080A4DF /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		D4E7A80A1A2D3A740080A4DF /* CurryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
+		D695FC4720C72C1100F69CA5 /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D695FC5B20C72C1F00F69CA5 /* PreludeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreludeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +150,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D695FC3F20C72C1100F69CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D695FC4020C72C1100F69CA5 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D695FC5520C72C1F00F69CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D695FC5620C72C1F00F69CA5 /* Prelude.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -141,6 +185,8 @@
 				D4D33D8D19FE8F8C001D051D /* Prelude-MacTests.xctest */,
 				547B480E1A39A78200B60CA9 /* Prelude.framework */,
 				547B48181A39A78300B60CA9 /* Prelude-iOSTests.xctest */,
+				D695FC4720C72C1100F69CA5 /* Prelude.framework */,
+				D695FC5B20C72C1F00F69CA5 /* PreludeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D33D8819FE8F8C001D051D /* Prelude.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D695FC4120C72C1100F69CA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D695FC4220C72C1100F69CA5 /* Prelude.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +343,42 @@
 			productReference = D4D33D8D19FE8F8C001D051D /* Prelude-MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D695FC3520C72C1100F69CA5 /* Prelude */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D695FC4420C72C1100F69CA5 /* Build configuration list for PBXNativeTarget "Prelude" */;
+			buildPhases = (
+				D695FC3620C72C1100F69CA5 /* Sources */,
+				D695FC3F20C72C1100F69CA5 /* Frameworks */,
+				D695FC4120C72C1100F69CA5 /* Headers */,
+				D695FC4320C72C1100F69CA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prelude;
+			productName = Prelude;
+			productReference = D695FC4720C72C1100F69CA5 /* Prelude.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D695FC4920C72C1F00F69CA5 /* PreludeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D695FC5820C72C1F00F69CA5 /* Build configuration list for PBXNativeTarget "PreludeTests" */;
+			buildPhases = (
+				D695FC4C20C72C1F00F69CA5 /* Sources */,
+				D695FC5520C72C1F00F69CA5 /* Frameworks */,
+				D695FC5720C72C1F00F69CA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D695FC4A20C72C1F00F69CA5 /* PBXTargetDependency */,
+			);
+			name = PreludeTests;
+			productName = PreludeTests;
+			productReference = D695FC5B20C72C1F00F69CA5 /* PreludeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -329,6 +419,8 @@
 				D4D33D8C19FE8F8C001D051D /* Prelude-MacTests */,
 				547B480D1A39A78200B60CA9 /* Prelude-iOS */,
 				547B48171A39A78300B60CA9 /* Prelude-iOSTests */,
+				D695FC3520C72C1100F69CA5 /* Prelude */,
+				D695FC4920C72C1F00F69CA5 /* PreludeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -356,6 +448,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D4D33D8B19FE8F8C001D051D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D695FC4320C72C1100F69CA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D695FC5720C72C1F00F69CA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,6 +531,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D695FC3620C72C1100F69CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D695FC3720C72C1100F69CA5 /* Tuple.swift in Sources */,
+				D695FC3820C72C1100F69CA5 /* Application.swift in Sources */,
+				D695FC3920C72C1100F69CA5 /* Prelude.swift in Sources */,
+				D695FC3A20C72C1100F69CA5 /* Optional.swift in Sources */,
+				D695FC3B20C72C1100F69CA5 /* Compose.swift in Sources */,
+				D695FC3C20C72C1100F69CA5 /* Curry.swift in Sources */,
+				D695FC3D20C72C1100F69CA5 /* Flip.swift in Sources */,
+				D695FC3E20C72C1100F69CA5 /* Fix.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D695FC4C20C72C1F00F69CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D695FC4D20C72C1F00F69CA5 /* TupleTests.swift in Sources */,
+				D695FC4E20C72C1F00F69CA5 /* FlipTests.swift in Sources */,
+				D695FC4F20C72C1F00F69CA5 /* PreludeTests.swift in Sources */,
+				D695FC5020C72C1F00F69CA5 /* CurryTests.swift in Sources */,
+				D695FC5120C72C1F00F69CA5 /* ConjunctionTests.swift in Sources */,
+				D695FC5220C72C1F00F69CA5 /* ApplicationTests.swift in Sources */,
+				D695FC5320C72C1F00F69CA5 /* ComposeTests.swift in Sources */,
+				D695FC5420C72C1F00F69CA5 /* FixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -437,6 +573,11 @@
 			isa = PBXTargetDependency;
 			target = D4D33D8119FE8F8C001D051D /* Prelude-Mac */;
 			targetProxy = D4D33D8F19FE8F8C001D051D /* PBXContainerItemProxy */;
+		};
+		D695FC4A20C72C1F00F69CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4D33D8119FE8F8C001D051D /* Prelude-Mac */;
+			targetProxy = D695FC4B20C72C1F00F69CA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -679,6 +820,83 @@
 			};
 			name = Release;
 		};
+		D695FC4520C72C1100F69CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1.2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Prelude/Info.plist;
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		D695FC4620C72C1100F69CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1.2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Prelude/Info.plist;
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		D695FC5920C72C1F00F69CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PreludeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D695FC5A20C72C1F00F69CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PreludeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -723,6 +941,24 @@
 			buildConfigurations = (
 				D4D33D9C19FE8F8C001D051D /* Debug */,
 				D4D33D9D19FE8F8C001D051D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D695FC4420C72C1100F69CA5 /* Build configuration list for PBXNativeTarget "Prelude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D695FC4520C72C1100F69CA5 /* Debug */,
+				D695FC4620C72C1100F69CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D695FC5820C72C1F00F69CA5 /* Build configuration list for PBXNativeTarget "PreludeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D695FC5920C72C1F00F69CA5 /* Debug */,
+				D695FC5A20C72C1F00F69CA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
