@@ -66,7 +66,7 @@ func toString<T>(x: T) -> String {
 }
 
 func count(string: String) -> Int {
-	return string.characters.count
+	return string.count
 }
 
 func map<S: Sequence, T>(sequence: S, _ transform: (S.Iterator.Element) -> T) -> [T] {
