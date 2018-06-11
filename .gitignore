@@ -5,3 +5,5 @@ xcuserdata
 *.pbxuser
 *.xcuserdatad
 *.xccheckout
+.idea/
+.build/
