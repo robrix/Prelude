@@ -177,6 +177,7 @@
 				D4D33D8319FE8F8C001D051D /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		D4D33D8319FE8F8C001D051D /* Products */ = {
 			isa = PBXGroup;
