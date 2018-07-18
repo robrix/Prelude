@@ -166,7 +166,7 @@ Full API documentation is in the source.
 3. Link your target against `Prelude.framework`.
 4. Application targets should ensure that the framework gets copied into their application bundle. (Framework targets should instead require the application linking them to include Prelude.)
 
-Or use the Swift package manager and add this to you `Package.swift` file:  
+Or use the Swift package manager and add this to your `Package.swift` file:  
 ```
   ...
   dependencies: [
